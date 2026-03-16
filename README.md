@@ -5,5 +5,6 @@ bonfleur: online verkauf familienblumenladen
 funktionen für website: Katalog
                         bezahlung
                         warenkorb
-                        lieferunganzeige
                         Inventaranzeige
+                        mby account
+                        
