@@ -1,13 +1,89 @@
 <!DOCTYPE html>
 <html lang="de">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Titel der Seite</title>
-    <link rel="stylesheet" href="myStyle.css" />
-    <script src="myScript.js" defer></script>
-  </head>
-  <body>
-    <p>Text im Browserfenster</p>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bon Fleur</title>
+  <link rel="stylesheet" href="myStyle.css" />
+  <link rel="stylesheet" href="style.css" />
+  
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      text-align: center;                       /* Zentriert die Überschrift und Texte */
+    }
+
+    /* Das Layout für deine Waren-Bilder */
+    .produkt-container {
+      display: flex;
+      justify-content: center;          /* Zentriert die Produkte in der Mitte */
+      gap: 30px;                        /* Abstand zwischen den Bildern */
+      flex-wrap: wrap;                   /* Zeilenumbruch auf dem Handy */
+      padding: 40px;
+    }
+
+    .produkt-card {
+      width: 280px;                     /* Breite der einzelnen Blumen-Karte */
+      text-align: center;
+    }
+
+    .produkt-card img {
+      width: 100%;                         /* Bild nutzt die volle Breite der Karte */
+      height: auto;
+      border-radius: 4px;                      /* Leicht abgerundete Ecken wie im Bild */
+    }
+
+    .mainNav a {
+      margin: 0 10px;                            /* Abstand zwischen deinen Links */
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="font-size: 50px;">Bon Fleur</h1>
+
+  <nav class="mainNav">
+    <a href="./index.html">Startseite</a>
+    <a href="./ware.html">Ware</a> 
+    <a href="./platzhalter2.html">Platzhalter 2</a> 
+    <a href="./platzhalter3.html">Platzhalter 3</a> 
+    <a href="./account.html">Account</a> 
+    <a href="./basket.html">Warenkorb</a> 
+  </nav>
+
+  <!--ware-->
+  <section class="verkauf">
+    <h2 style="margin-top: 50px; text-transform: uppercase;">ware</h2>
+    
+    <div class="produkt-container">
+      
+    <!-- Produkt -->
+    <div class="produkt-card">
+      <img src="bad.png" alt="Blumenstrauß">
+      <h3>produkt1</h3>
+      <p class="preis">ab 67,00 €</p>
+    </div>
+
+    <div class="produkt-card">
+      <img src="Handy.png" alt="Blumenstrauß2">
+      <h3>produkt2</h3>
+      <p class="preis">ab 69,00 €</p>
+    </div>
+
+   <div class="produkt-card">
+      <img src="Nerd.png" alt="Blumenstrauß3">
+      <h3>produkt3</h3>
+      <p class="preis">ab 66,00 €</p>
+    </div>
+    
+    
+      </div>
+
+    </div>
+  </section>
+
+</body>
 </html>
