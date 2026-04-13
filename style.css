@@ -1,0 +1,154 @@
+body {
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      text-align: center;                       /* Zentriert die Überschrift und Texte */
+    }
+
+    /* Das Layout für deine Waren-Bilder */
+    .produkt-container {
+      display: flex;
+      justify-content: center;          /* Zentriert die Produkte in der Mitte */
+      gap: 30px;                        /* Abstand zwischen den Bildern */
+      flex-wrap: wrap;                   /* Zeilenumbruch auf dem Handy */
+      padding: 40px;
+    }
+
+    .produkt-card {
+      width: 280px;                     /* Breite der einzelnen Blumen-Karte */
+      text-align: center;
+    }
+
+    .produkt-card img {
+      width: 100%;                         /* Bild nutzt die volle Breite der Karte */
+      height: auto;
+      border-radius: 4px;                      /* Leicht abgerundete Ecken wie im Bild */
+    }
+
+    .mainNav a {
+      margin: 0 10px;                            /* Abstand zwischen deinen Links */
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+    }
+
+.mainNav { 
+  background: rgb(255, 255, 255);
+  color: white;
+}
+
+
+a {
+  font: Courier;
+  font: 14px Courier;
+  text-decoration: none;
+  color: white;
+  padding: 0px 5px 0px 30px;
+  border-right: none;
+}
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('pngs/hintergrundladen.png');
+  
+  
+  background-size: cover;     
+  background-position: center; 
+  height: 60vh;                
+  
+  
+  display: flex;
+  justify-content: center;    
+  align-items: center;        
+  color: white;               
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 50px;            
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;   
+}
+
+.hero-content p {
+  font-size: 20px;
+}
+.mainNav {
+  text-align: center;
+  height: 30px;
+  background: rgb(0, 0, 0);
+  padding-top: 7px;
+  padding-left: 5px;
+  margin-top: 20px;
+  box-shadow: 4px 6px grey;
+  overflow: hidden;
+}
+
+.product-slider {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;     
+  gap: 20px;           
+  padding: 20px;
+  scroll-snap-type: x mandatory; 
+  -webkit-overflow-scrolling: touch;
+}
+
+.product-card {
+  flex: 0 0 300px;      
+  scroll-snap-align: center; 
+  border: 1px solid #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;          
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-slider2 {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;     
+  gap: 20px;           
+  padding: 20px;
+  scroll-snap-type: x mandatory; 
+  -webkit-overflow-scrolling: touch;
+}
+
+.product-card {
+  flex: 0 0 300px;      
+  scroll-snap-align: center; 
+  border: 1px solid #eee;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-card img {
+  width: 100%;          
+  height: auto;
+  border-radius: 8px;
+}
+
+.site-footer {
+  background-color: #000; 
+  color: white;
+  padding: 40px 20px;
+  margin-top: 50px; 
+  text-align: center;
+}
+
+.footer-links {
+  margin-top: 20px;
+}
+
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: white; 
+}
