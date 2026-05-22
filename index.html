@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bon Fleur</title>
-  <link rel="stylesheet" href="myStyle.css" />
   <link rel="stylesheet" href="style.css" />
-  
+  <script src="script.js" defer></script>
+
   <style>
     
   </style>
@@ -25,16 +25,22 @@
     <a href="./Beliebt.html">Beliebt</a> 
     <a href="./Bestand.html">Bestand</a>  
     <a href="./Saisonal.html">Saisonal</a>
-    <a href="./account.html">Account</a> 
     <a href="./basket.html">Warenkorb</a> 
+    <a href="./account.html">Account</a> 
   </nav>
-
 
 
  <section class="hero">
   <div class="hero-content">                <!--hintergrund mit ki gemacht-->
     <h1 style="color: rgb(255, 255, 255);">BLUMEN BESTELLEN<br>MIT BON FLEUR</h1>
     <p>Blumen aus Kreuzberg</p>
+  
+        <search action="/search" method="GET">                                        <!--suchleiste-->
+ <input type="search" id="search" name="q" placeholder="Blumen suchen">
+ <button type="submit">Suchen</button>
+    </search>
+
+
   </div>
 
 </section>
@@ -47,11 +53,15 @@
 
    <div class="product-slider">
 
-  <div class="product-card">
+   <!--"id = "Produkt1"" ist ein Knopf zum anklicken. siehe in script.js zeile 5-6 den code neulollol-->
+<div id="Produkt1" class="product-card" data-name="Strauß 1" data-price="15.67">
+  <div class="card-content">
     <img src="pngs/banane.png" alt="banane">
     <h3>Strauß 1</h3>
     <p>15,67 €</p>
   </div>
+  <button class="add-btn">Zum Warenkorb hinzufügen</button>
+</div>
 
   <div class="product-card">
     <img src="pngs/bbad.png" alt="bbad">
@@ -156,3 +166,5 @@
 
 </body>
 </html>
+
+
