@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warenkorb - Bon Fleur</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="basket-logic.js" defer></script>
+</head>
+
+<body>
+
+  <header style="padding: 20px 0; text-align: center;">
+    <img src="pngs/bonfleur.png" alt="Bon Fleur Logo" style="max-width: 200px;">
+  </header>
+
+  <nav class="mainNav">
+    <a href="./index.html">Startseite</a>
+    <a href="./Beliebt.html">Beliebt</a> 
+    <a href="./Bestand.html">Bestand</a>  
+    <a href="./Saisonal.html">Saisonal</a>
+    <a href="./basket.html">Warenkorb</a> 
+    <a href="./account.html">Account</a>
+  </nav>
+
+  <section class="container">
+    <h1>Dein Warenkorb</h1>
+    
+    <div id="cart-content">
+      <p>Lade Warenkorb...</p>
+    </div>
+
+    <div id="cart-total" style="margin-top: 20px; font-weight: bold; font-size: 20px;">
+      </div>
+
+    <button onclick="clearCart()" style="margin-top: 30px; padding: 10px;">Warenkorb leeren</button>
+  </section>
+
+<!--ki-->
+<script>
+  function displayBasket() {
+    const korb = JSON.parse(localStorage.getItem('meinWarenkorb')) || [];
+    const liste = document.getElementById('cart-content');
+    liste.innerHTML = "";
+
+    if (korb.length === 0) {
+      liste.innerHTML = "<p>Der Warenkorb ist leer.</p>";
+      document.getElementById('cart-total').textContent = ""; 
+    } else {
+      let summe = 0;
+      korb.forEach(item => {
+        const div = document.createElement('div');
+        div.innerHTML = `<strong>${item.name}</strong> - ${item.price} €`;
+        liste.appendChild(div);
+        summe += parseFloat(item.price);
+      });
+      document.getElementById('cart-total').textContent = "Gesamt: " + summe.toFixed(2) + " €";
+    }
+  }
+
+
+  function clearCart() {
+    if (confirm("Möchtest du wirklich alle Artikel aus dem Warenkorb löschen?")) {
+      localStorage.removeItem('meinWarenkorb');
+      displayBasket();
+    }
+  }
+
+
+  displayBasket();
+</script>
+  </body>
+</html>
+
+
+
+</body>
+</html>
