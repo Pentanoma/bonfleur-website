@@ -10,33 +10,35 @@
 
 <body>
 
-  <header style="padding: 20px 0; text-align: center;">
-    <img src="pngs/bonfleur.png" alt="Bon Fleur Logo" style="max-width: 200px;">
+  <header class="site-header">
+    <img src="pngs/bonfleur.png" alt="Bon Fleur Logo" class="site-logo">
   </header>
 
   <nav class="mainNav">
     <a href="./index.html">Startseite</a>
     <a href="./Beliebt.html">Beliebt</a> 
-    <a href="./Bestand.html">Bestand</a>  
-    <a href="./Saisonal.html">Saisonal</a>
+    <a href="./Bestand.html">Bestand</a> 
+   <a href="./Saisonal.html">Saisonal</a>    
     <a href="./basket.html">Warenkorb</a> 
     <a href="./account.html">Account</a>
   </nav>
 
-  <section class="container">
-    <h1>Dein Warenkorb</h1>
-    
-    <div id="cart-content">
-      <p>Lade Warenkorb...</p>
-    </div>
+<section class="container">
+  <h1>Dein Warenkorb</h1>
 
-    <div id="cart-total" style="margin-top: 20px; font-weight: bold; font-size: 20px;">
-      </div>
+  <div id="cart-content">
+    <p>Lade Warenkorb...</p>
+  </div>
 
-    <button onclick="clearCart()" style="margin-top: 30px; padding: 10px;">Warenkorb leeren</button>
-  </section>
+  <div id="cart-total" style="margin-top: 20px; font-weight: bold; font-size: 20px;"></div>
 
-<!--ki-->
+  <button onclick="confirmPurchase()" class="btn-confirm">Kauf bestätigen</button>
+  <button onclick="clearCart()" class="btn-clear">Warenkorb leeren</button>
+</section>
+
+  
+<!--ki gemacht,  funktioniert iwie net in js deshalb hier unten-->
+
 <script>
   function displayBasket() {
     const korb = JSON.parse(localStorage.getItem('meinWarenkorb')) || [];
@@ -58,6 +60,27 @@
     }
   }
 
+  function confirmPurchase() {
+    const korb = JSON.parse(localStorage.getItem('meinWarenkorb')) || [];
+
+    if (korb.length === 0) {
+      alert("Dein Warenkorb ist leer.");
+      return;
+    }
+
+    let bestellungen = JSON.parse(localStorage.getItem('meineBestellungen')) || [];
+    bestellungen.push({
+      datum: new Date().toLocaleDateString('de-DE'),
+      artikel: korb
+    });
+    localStorage.setItem('meineBestellungen', JSON.stringify(bestellungen));
+
+    localStorage.removeItem('meinWarenkorb');
+
+    alert("Kauf erfolgreich! Du wirst zu deinem Account weitergeleitet.");
+
+    window.location.href = "account.html";
+  }
 
   function clearCart() {
     if (confirm("Möchtest du wirklich alle Artikel aus dem Warenkorb löschen?")) {
@@ -66,11 +89,17 @@
     }
   }
 
-
   displayBasket();
 </script>
+
   </body>
 </html>
+
+
+
+</body>
+</html>
+
 
 
 
