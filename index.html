@@ -16,8 +16,8 @@
 <body>
 
   
-  <header style="padding: 20px 0;">
-  <img src="pngs/bonfleur.png" alt="Bon Fleur Logo" style="max-width: 300px; height: auto;">
+  <header class="site-header">
+    <img src="pngs/bonfleur.png" alt="Bon Fleur Logo" class="site-logo">
 </header>
 
   <nav class="mainNav">
@@ -30,117 +30,164 @@
   </nav>
 
 
- <section class="hero">
-  <div class="hero-content">                <!--hintergrund mit ki gemacht-->
-    <h1 style="color: rgb(255, 255, 255);">BLUMEN BESTELLEN<br>MIT BON FLEUR</h1>
+<section class="hero">
+  <div class="hero-content">             
+       <h1>BLUMEN BESTELLEN<br>MIT BON FLEUR</h1>
     <p>Blumen aus Kreuzberg</p>
-  
-        <search action="/search" method="GET">                                        <!--suchleiste-->
+  </div>
+
+
+  <!--suchleiste-->
+   <!--
+   <search action="/search" method="GET">                                        
  <input type="search" id="search" name="q" placeholder="Blumen suchen">
  <button type="submit">Suchen</button>
     </search>
-
-
+  
+   -->
+     
   </div>
 
 </section>
   <!--ware-->
   <section class="verkauf">
-    <h2 style="margin-top: 50px; text-transform: uppercase;">Beliebt</h2>
     
+    <!-- BELIEBT -->
+
+   <a href="./Beliebt.html" class="section-link">
+  <h2 style="margin-top: 50px; text-transform: uppercase;">Beliebt</h2>
+</a>
+
     <div class="produkt-container">         <!--ki verwendet wegen slider-->
 
 
-   <div class="product-slider">
+<!-- BELIEBT -->
 
-   <!--"id = "Produkt1"" ist ein Knopf zum anklicken. siehe in script.js zeile 5-6 den code neulollol-->
-<div id="Produkt1" class="product-card" data-name="Strauß 1" data-price="15.67">
-  <div class="card-content">
-    <img src="pngs/banane.png" alt="banane">
-    <h3>Strauß 1</h3>
-    <p>15,67 €</p>
+<div class="product-slider">
+
+  <div id="Produkt1" class="product-card" data-name="Strauß 1" data-price="15.67">
+    <div class="card-content">
+      <img src="pngs/Strauß1.png" alt="Strauß1">
+      <h3>Strauß 1</h3>
+      <p>15,67 €</p>
+    </div>
+    <button class="add-btn">Zum Warenkorb hinzufügen</button>
   </div>
-  <button class="add-btn">Zum Warenkorb hinzufügen</button>
+
+  <div id="Produkt2" class="product-card" data-name="Strauß 2" data-price="42.00">
+    <div class="card-content">
+      <img src="pngs/Strauß2.png" alt="Strauß2">
+      <h3>Strauß 2</h3>
+      <p>ab 42,00 €</p>
+    </div>
+    <button class="add-btn">Zum Warenkorb hinzufügen</button>
+  </div>
+
+  <div id="Produkt3" class="product-card" data-name="Strauß 3" data-price="400.00">
+    <div class="card-content">
+      <img src="pngs/Strauß3.png" alt="Strauß3">
+      <h3>Strauß 3</h3>
+      <p>ab 400 €</p>
+    </div>
+    <button class="add-btn">Zum Warenkorb hinzufügen</button>
+  </div>
+
+  <div id="Produkt4" class="product-card" data-name="Strauß 4" data-price="0.00">
+    <div class="card-content">
+      <img src="pngs/Strauß4.png" alt="Strauß4">
+      <h3>Strauß 4</h3>
+      <p>gratis €</p>
+    </div>
+    <button class="add-btn">Zum Warenkorb hinzufügen</button>
+  </div>
+
+  <div id="Produkt5" class="product-card" data-name="Strauß 5" data-price="20.99">
+    <div class="card-content">
+      <img src="pngs/Strauß5.png" alt="Strauß5">
+      <h3>Strauß 5</h3>
+      <p>ab 20,99 €</p>
+    </div>
+    <button class="add-btn">Zum Warenkorb hinzufügen</button>
+  </div>
+
+  <div id="Produkt6" class="product-card" data-name="Strauß 6" data-price="2.99">
+    <div class="card-content">
+      <img src="pngs/strauß6.png" alt="strauß6">
+      <h3>Strauß 6</h3>
+      <p>ab 2,99 €</p>
+    </div>
+    <button class="add-btn">Zum Warenkorb hinzufügen</button>
+  </div>
+
 </div>
-
-  <div class="product-card">
-    <img src="pngs/bbad.png" alt="bbad">
-    <h3>Strauß 2</h3>
-    <p>ab 42,00 €</p>
-  </div>
-
-  <div class="product-card">
-    <img src="pngs/brille.png" alt="brille">
-    <h3>Strauß 3</h3>
-    <p>ab 400 €</p>
-  </div>
-
-<div class="product-card">
-    <img src="pngs/davie.png" alt="davie">
-    <h3>Strauß 4</h3>
-    <p>gratis €</p>
-</div>
-
-    <div class="product-card">
-    <img src="pngs/filip.png" alt="filip">
-    <h3>Strauß 5</h3>
-    <p>ab 20,99 €</p>
-
-  </div>
-  <div class="product-card">
-    <img src="pngs/trinker.png" alt="trinker">
-    <h3>Strauß 6</h3>
-    <p>ab 2,99 €</p>
-
-  </div>
-  </div>
      
       </div>
- <h2 style="margin-top: 50px; text-transform: uppercase;">Saisonal</h2>
+<!-- SAISONAL -->
+
+ <a href="./Saisonal.html" class="section-link">
+  <h2 style="margin-top: 50px; text-transform: uppercase;">Saisonal</h2>
+</a>
     
     <div class="produkt-container2">
 
 
-   <div class="product-slider2">
+<div class="product-slider2">
 
-  <div class="product-card">
-    <img src="pngs/nnerd.png" alt="nnerd">
-    <h3>saisonale 1</h3>
-    <p>15,67 €</p>
-  </div>
-
-  <div class="product-card">
-    <img src="pngs/wasser.png" alt="wassser">
-    <h3>saisionale 2</h3>
-    <p>ab 42,00 €</p>
-  </div>
-
-  <div class="product-card">
-    <img src="pngs/brille.png" alt="brille">
-    <h3>saisonale 3</h3>
-    <p>ab 4,00 €</p>
-  </div>
-
-<div class="product-card">
-    <img src="pngs/davie.png" alt="davie">
-    <h3>saisonale 4</h3>
-    <p>32,00 €</p>
-</div>
-
-    <div class="product-card">
-    <img src="pngs/filip.png" alt="filip">
-    <h3>saisonale 5</h3>
-    <p>ab 2,99 €</p>
-
-  </div>
-  <div class="product-card">
-    <img src="pngs/trinker.png" alt="trinker">
-    <h3>saisonale 6</h3>
-    <p>ab 5,99 €</p>
-
-  </div>
-
+  <div id="Saisonal1" class="product-card" data-name="saisonale 1" data-price="15.67">
+    <div class="card-content">
+      <img src="pngs/Sesionale 1.png" alt="Sesionale 1">
+      <h3>saisonale 1</h3>
+      <p>15,67 €</p>
     </div>
+    <button class="add-btn">Zum Warenkorb hinzufügen</button>
+  </div>
+
+  <div id="Saisonal2" class="product-card" data-name="saisonale 2" data-price="42.00">
+    <div class="card-content">
+      <img src="pngs/Sesionale 2.png" alt="Saisonae 2">
+      <h3>saisionale 2</h3>
+      <p>ab 42,00 €</p>
+    </div>
+    <button class="add-btn">Zum Warenkorb hinzufügen</button>
+  </div>
+
+  <div id="Saisonal3" class="product-card" data-name="saisonale 3" data-price="4.00">
+    <div class="card-content">
+      <img src="pngs/Sesionale 3.png" alt="Sesionale 3">
+      <h3>saisonale 3</h3>
+      <p>ab 4,00 €</p>
+    </div>
+    <button class="add-btn">Zum Warenkorb hinzufügen</button>
+  </div>
+
+  <div id="Saisonal4" class="product-card" data-name="saisonale 4" data-price="32.00">
+    <div class="card-content">
+      <img src="pngs/Sesionale 4.png" alt="Sesionale 4">
+      <h3>saisonale 4</h3>
+      <p>32,00 €</p>
+    </div>
+    <button class="add-btn">Zum Warenkorb hinzufügen</button>
+  </div>
+
+  <div id="Saisonal5" class="product-card" data-name="saisonale 5" data-price="2.99">
+    <div class="card-content">
+      <img src="pngs/Sesionale5.png" alt="Saisonale 5">
+      <h3>saisonale 5</h3>
+      <p>ab 2,99 €</p>
+    </div>
+    <button class="add-btn">Zum Warenkorb hinzufügen</button>
+  </div>
+
+  <div id="Saisonal6" class="product-card" data-name="saisonale 6" data-price="5.99">
+    <div class="card-content">
+      <img src="pngs/Sesionale 6.png" alt="Saisonale 6">
+      <h3>saisonale 6</h3>
+      <p>ab 5,99 €</p>
+    </div>
+    <button class="add-btn">Zum Warenkorb hinzufügen</button>
+  </div>
+
+</div>
     </div>
     <footer class="site-footer">
   <div class="footer-content">
@@ -166,5 +213,8 @@
 
 </body>
 </html>
+
+
+
 
 
